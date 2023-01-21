@@ -2,6 +2,12 @@
 
 I still use my old HAMEG HM205-3 scope. It has a socket for an digital interface, but the interface itself was missing when I got the scope. Here is my solution, a serial interface based on an Arduino Nano.
 
+![Mounted interface](InterfaceMountedLarge.jpg)
+
+**Warning: This interface does not provide galvanic isolation!**
+
+**No Waranty. Everything works fine for me. Please check your scope manual if you want to use my Interface with a different scope.**
+
 ## Electical Connections
 
 The Arduino Nano is mounted on a small double layer matrix board together with the 2 x 13 female header for the  connection to the scope.
@@ -30,15 +36,19 @@ There is no 8 bit parallel port available at the Arduino Nano with the ATMEGA 32
     GND           GND     1,25,26  
     5 V           5 V     11                                Diode, anode hameg -> kathode Arduino   
 	
-	Remark 1: These signals are not used at the moment. If I find some time I will extend it.
+Remark 1: These signals are not used at the moment. If I find some time I will extend it.
   
-    I soldered resistors for all connections to port C since some of the signals might be input or output.
+I soldered resistors for all connections to port C since some of the signals might be input or output.
+
+![solderd resistors and connections](InterfaceInside.jpg)
    
-    The Arduino Nano is powered by the USB port, or from the scope via the diode if there is no USB connection.
+The Arduino Nano is powered by the USB port, or from the scope via the diode if there is no USB connection.
 
 ## 3D printed housing 
 
 Design with OpenScad in HamegNanoCover.scad.
+
+![3D printed Cover](InterfaceCover.jpg)
 
 ## Arduino Sketch
 
