@@ -1,0 +1,5 @@
+# git ignore files
+# Ignore private settings
+.git-credentials
+# Ignore generated stl files
+*.stl
